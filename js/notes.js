@@ -27,7 +27,7 @@ export default class StickyNotes {
 		let data = this.getNotes();
 
 		if (data.length != 0) {
-			this.getNotes().forEach((note) => {
+			data.forEach((note) => {
 				let noteElement = this.createNoteElement(
 					note.id,
 					note.updatedAt,

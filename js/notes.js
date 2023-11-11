@@ -26,7 +26,6 @@ export default class StickyNotes {
 	displayNotes() {
 		let data = this.getNotes();
 
-		if (data.length != 0) {
 			data.forEach((note) => {
 				let noteElement = this.createNoteElement(
 					note.id,
@@ -36,9 +35,7 @@ export default class StickyNotes {
 
 				this.el.noteContainer.appendChild(noteElement);
 			});
-		} else {
-			this.addNotes();
-		}
+		} 
 	}
 
 	searchNotes(value) {

@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 1rem;
+
+	color: white;
+	background: rgb(20, 20, 20);
+
+	font-family: "Azeret Mono", monospace;
+}
+
+.container {
+	display: flex;
+	gap: 1.2rem;
+	align-items: start;
+
+	padding: 1rem;
+}
+
+/* STICY NOTE CONTAINER */
+
+.sticky-notes-container,
+.edit-note {
+	position: relative;
+
+	padding: 1rem;
+
+	width: 24rem;
+
+	border: 2px solid white;
+	border-radius: 8px;
+}
+
+/* ADD BUTTON */
+
+button {
+	cursor: pointer;
+
+	background: none;
+
+	width: 2.4rem;
+	height: 2.4rem;
+
+	border: 2px solid white;
+	border-radius: 4px;
+
+	color: white;
+}
+
+button span {
+	display: block;
+}
+
+button:hover {
+	background: #6b6b6b71;
+}
+
+/* SEARCH BAR */
+
+input {
+	padding: 0.6rem 0.4rem;
+
+	width: 100%;
+
+	border: none;
+	border-radius: 4px;
+
+	font-family: "Azeret Mono", monospace;
+	font-size: 0.9rem;
+}
+
+/* NOTE ELEMENT */
+
+.note {
+	cursor: pointer;
+
+	position: relative;
+
+	padding: 1rem;
+	margin-top: 1rem;
+
+	border-radius: 4px;
+	border: 2px solid white;
+}
+
+.note:hover {
+	background: #6b6b6b71;
+}
+
+.note .time {
+	position: absolute;
+	right: 1rem;
+
+	font-size: 0.8rem;
+}
+
+.note .content {
+	margin-top: 1.4rem;
+
+	width: 100%;
+
+	resize: none;
+
+	color: white;
+	background: none;
+
+	font-size: 0.9rem;
+	font-family: "Azeret Mono";
+
+	border: none;
+}
+
+/* EDIT NOTE ELEMENT */
+
+.edit-note {
+	margin: 1rem;
+}
+
+.delete,
+.save,
+.close {
+	border: none;
+}
+
+.edit-note .buttons {
+	display: flex;
+	gap: 0;
+	justify-content: space-between;
+}
+
+.edit-note textarea {
+	resize: none;
+
+	display: block;
+
+	padding: 1rem;
+	margin-top: 0.8rem;
+
+	width: 100%;
+	height: 16rem;
+
+	background: none;
+	color: white;
+
+	font-size: 0.9rem;
+	font-family: "Azeret Mono", monospace;
+
+	border: 2px solid white;
+	border-radius: 4px;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+/* UTILS */
+
+@keyframes loading {
+	from {
+		transform: rotateZ(0deg);
+		opacity: 1;
+	}
+	to {
+		transform: rotateZ(180deg);
+		opacity: 0;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.noselect {
+	user-select: none;
+}

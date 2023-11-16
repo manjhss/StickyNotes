@@ -83,7 +83,7 @@ export default class StickyNotes {
 
 	addNotes() {
 		let id = Math.floor(Math.random() * 100000);
-		let updatedAt = this.updatedAt();
+		let updatedAt = "00:00";
 		let content = ``;
 
 		let noteElement = this.createNoteElement(id, updatedAt, content);

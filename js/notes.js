@@ -26,7 +26,7 @@ export default class StickyNotes {
 	}
 
 	setNotesItem() {
-		if (localStorage.getItem("sticky-notes-data") == null) {
+		if (!localStorage.getItem("sticky-notes-data")) {
 			localStorage.setItem("sticky-notes-data", "[]");
 		}
 	}

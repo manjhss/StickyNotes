@@ -64,7 +64,7 @@ export default class StickyNotes {
 	}
 
 	getNotes() {
-		return JSON.parse(localStorage.getItem("sticky-notes-data"));
+		return JSON.parse(localStorage.getItem("sticky-notes-data"), "[]");
 	}
 
 	addNotes() {
